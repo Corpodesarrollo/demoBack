@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="6.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="7.0.13" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.7.2" />
+    <PackageReference Include="MSTest.TestAdapter" Version="3.1.1" />
+    <PackageReference Include="MSTest.TestFramework" Version="3.1.1" />
+    <PackageReference Include="coverlet.collector" Version="6.0.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="SISPRO.TRV.Entity" Version="1.0.0.292" />
+    <PackageReference Include="SISPRO.TRV.General" Version="1.0.0.275" />
+    <PackageReference Include="SISPRO.TRV.Web.MVCCore" Version="1.0.0.1347" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ACO.Api\ACO.Api.csproj" />
+    <ProjectReference Include="..\ACO.Api.Client\ACO.Api.Client.csproj" />
+  </ItemGroup>
+<ItemGroup><Content Include="..\ACO.Api\appsettings.Development.json" Link="appsettings.Development.json"><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory></Content><Content Include="..\ACO.Api\appsettings.json" Link="appsettings.json"><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory></Content></ItemGroup>
+</Project>

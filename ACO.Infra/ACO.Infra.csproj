@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Repositories\Recursos\PlantillaConsolidadoReserva.xlsx" />
+    <None Remove="Repositories\Recursos\PlantillaConsultaUnificadaAT.xlsx" />
+    <None Remove="Repositories\Recursos\PlantillaReporteIBCReserva.xlsx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Repositories\Recursos\PlantillaConsultaUnificadaAT.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Repositories\Recursos\PlantillaConsolidadoReserva.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Repositories\Recursos\PlantillaReporteIBCReserva.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ClosedXML" Version="0.102.1" />
+    <PackageReference Include="Dapper" Version="2.1.15" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.1" />
+    <PackageReference Include="SISPRO.TRV.Entity" Version="1.0.0.292" />
+    <PackageReference Include="SISPRO.TRV.General" Version="1.0.0.275" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ACO.Core\ACO.Core.csproj" />
+  </ItemGroup>
+
+</Project>
