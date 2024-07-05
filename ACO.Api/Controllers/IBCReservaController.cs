@@ -58,5 +58,23 @@ namespace ACO.Api.Controllers
         {
             return await _Repo.DescargarConsolidadoReporte(IdAnio, IdMes);
         }
+
+        [HttpGet("ConsultarEntidadesAutorizadas")]
+        public async Task<List<EntidadAutorizadaResponse>> ConsultarEntidadesAutorizadas()
+        {
+            return await _Repo.ConsultarEntidadesAutorizadas();
+        }
+
+        [HttpGet("ConsultarTrazaEntidadAutorizada")]
+        public async Task<List<EntidadAutorizadaResponse>> ConsultarTrazaEntidadAutorizada(string tipoIdEntidad, long nroIdEntidad)
+        {
+            return await _Repo.ConsultarTrazaEntidadAutorizada(tipoIdEntidad, nroIdEntidad);
+        }
+
+        [HttpPost("HabilitarEntidadAutorizada")]
+        public async Task<List<EntidadAutorizadaResponse>> HabilitarEntidadAutorizada(string tipoIdEntidad, long nroIdEntidad, string resolucionHabilitacion, string fechaHabilitacion)
+        {
+            return await _Repo.ConsultarTrazaEntidadAutorizada(tipoIdEntidad, nroIdEntidad);
+        }
     }
 }
